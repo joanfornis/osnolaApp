@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: Merriweather;
+    transition: transform 0.75s cubic-bezier(.2,0,0,1),opacity 0.5s ease-in-out; /*Motion Vanilla*/
+
+}
+h1,h2,h3,h4,h5,h6,button{font-family: Josefin Sans}
+
+h1{font-size: 2.5rem}
+
+
+
+/*tailwind Mixins*/
+.btn-primary {
+    @apply bg-white border-primary border-default rounded-md my-3 py-2 px-6 text-primary font-bold hover:bg-primary-light active:bg-primary hover:text-white
+}
+
+
+
