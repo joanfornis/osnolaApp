@@ -1,5 +1,7 @@
 import React from 'react';
+import Hero from './../components/Hero'
 import Carousel from './../components/Carousel'
+import FabButton from './../element/FabButton';
 
 export default function Home({Fancybox}) {
 
@@ -13,12 +15,21 @@ export default function Home({Fancybox}) {
 
 
   return (
-    <section className={`bg-lime w-full h-screen rounded-2xl p-6 ${loading ? 'opacity-0' : 'opacity-1'}`}>
+  <>
+    <Hero/>
+    
+    <section className={`bg-lime w-full h-screen p-6 ${loading ? 'opacity-0' : 'opacity-1'}`}>
+
       <h4>Home Working OK👌</h4>
 
       <Carousel/>
                 
     </section>
+
+    <FabButton/>
+
+  </>
+    
   );
 }
 

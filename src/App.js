@@ -7,7 +7,6 @@ import Router from './services/Router'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-
 import FirebaseFetch from './services/FirebaseFetch'
 
 

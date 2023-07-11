@@ -17,10 +17,10 @@ module.exports = {
           DEFAULT: '#6D3B47',
           dark: '#0e7490',
         },
-        'slate' : '#ccc',
+        'slate' : '#ddd',
         'white' : '#fff',
-        'orange' : '#f97316',
-        'lime' : '#84cc16'
+        'orange' : '#FCB888',
+        'lime' : '#CCF391'
       },
     },
   },
