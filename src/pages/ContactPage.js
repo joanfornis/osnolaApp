@@ -12,14 +12,14 @@ export default function ContactPage({Fancybox}) {
     }, [])
 
     return (
-            <section className={`bg-orange w-full h-screen rounded-2xl p-6 ${loading ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-1'}`}>
+            <section className={`bg-orange w-full h-screen p-6 ${loading ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-1'}`}>
                 <h4>ContactPage Working OK👌</h4>
 
-                <button data-fancybox data-src="#dialog-content" class="btn-primary">Launch Dialog</button>
+                <button data-fancybox data-src="#dialog-content" className="btn-primary">Launch Dialog</button>
 
                 <dialog id="dialog-content" style={{display:'none'}}>
 
-                    <h1 class="text-primary font-bold">Modal OK</h1>
+                    <h1 className="text-primary font-bold">Modal OK</h1>
 
                 </dialog>
             </section>

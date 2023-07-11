@@ -25,7 +25,7 @@ const slides = [1,2,3,4,5]
 
 export default function Carousel() {
     return (
-        <TinySlider settings={settings}>
+        <TinySlider settings={settings} className="cursor-grab">
           {
             slides.map((number) =>
               <SliderItem key={number}/>
@@ -39,8 +39,8 @@ export default function Carousel() {
 function SliderItem() {
   return (
     <div>
-      <article class="shadow-lg rounded-md p-5 mb-4 bg-white">
-        <img src="" class="w-full h-[300px] bg-slate animate-pulse"/>
+      <article className="shadow-lg rounded-md p-5 mb-4 bg-white">
+        <img src="" className="w-full h-[300px] bg-slate animate-pulse"/>
         <div>
           <h3>title</h3>
           <p>paragraph</p>
