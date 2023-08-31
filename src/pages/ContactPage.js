@@ -1,9 +1,10 @@
 import React from 'react';
+import ContactForm from './../services/ContactForm';
+import Hero from './../components/Hero'
+import ContactPageStyle from './ContactPage.module.scss'
 
 
 export default function ContactPage({Fancybox}) {
-
-    Fancybox.bind("[data-fancybox]", {});
 
     const [loading, setLoading] = React.useState(true);
     React.useEffect(() => {
@@ -12,16 +13,28 @@ export default function ContactPage({Fancybox}) {
     }, [])
 
     return (
-            <section className={`bg-orange w-full h-screen p-6 ${loading ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-1'}`}>
-                <h4>ContactPage Working OK👌</h4>
 
-                <button data-fancybox data-src="#dialog-content" className="btn-primary">Launch Dialog</button>
+        <>
+        
+        <a href="/" className="pointer-events-none md:pointer-events-auto">
+            <img src="/assets/logos/osnola-logo-primary.svg" alt="logo" className="mainlogo absolute z-10 top-0 w-[170px] h-[170px] p-4 opacity-0 md:opacity-100 brightness-[500]"/>
+        </a>
 
-                <dialog id="dialog-content" style={{display:'none'}}>
+        <section className={`bg-gray w-full ${loading ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-1'} ${ContactPageStyle}`}>
 
-                    <h1 className="text-primary font-bold">Modal OK</h1>
+            <Hero background='/assets/images/contact-background.jpg'/>
 
-                </dialog>
-            </section>
+            <div class="container">
+                <h4 className="text-3xl titleribbon mb-6">CONTACTO</h4>
+                <ContactForm Fancybox={Fancybox}/>
+            </div>
+            
+
+        </section>
+        
+        
+        </>
+
+        
     );
 }

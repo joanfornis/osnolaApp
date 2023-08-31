@@ -5,9 +5,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    borderWidth: {
-      'default': '3px'
-    },
+   
     extend: {
       colors: {
         transparent: 'transparent',
@@ -17,11 +15,19 @@ module.exports = {
           DEFAULT: '#6D3B47',
           dark: '#0e7490',
         },
-        'slate' : '#ddd',
+        'secondary': '#B06D86',
+        'slate' : '#eee',
         'white' : '#fff',
         'orange' : '#FCB888',
-        'lime' : '#CCF391'
+        'lime' : '#CCF391',
+        'gray' : '#ccc',
+        'dark' : '#333',
+        'dark-light' : '#666',
       },
+      fontFamily: {
+        'josefin': ['Josefin Sans'],
+        'merri': ['Merriweather']
+      }
     },
   },
   plugins: [],

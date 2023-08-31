@@ -6,19 +6,77 @@
     margin:0;
     box-sizing: border-box;
     font-family: Merriweather;
-    transition: transform 0.5s cubic-bezier(.2,0,0,1), opacity 0.5s ease-in-out; /*Motion Vanilla*/
+    //transition: transform 0.5s cubic-bezier(.2,0,0,1), opacity 0.5s ease-in-out; /*Motion Vanilla*/
+    transition: all 0.5s cubic-bezier(.2,0,0,1) /*Motion Vanilla*/
 
 }
+
+
+body{background-color: theme("colors.dark");}
+
+
 h1,h2,h3,h4,h5,h6,button{font-family: Josefin Sans}
 
 h1{font-size: 2.5rem}
 
-
+/*forms*/
+input,textarea{outline: none;}
+input[type="submit"] {cursor:pointer}
+input::placeholder, textarea::placeholder {
+    color:theme("colors.secondary");
+    font-weight: bold;
+    opacity:0.75
+}
 
 /*tailwind Mixins*/
 .btn-primary {
-    @apply bg-white border-primary border-default rounded-md my-3 py-2 px-6 text-primary font-bold hover:bg-primary-light active:bg-primary hover:text-white
+    @apply border-primary font-josefin text-lg text-white border-4 rounded-md my-3 py-2 px-6 font-bold hover:opacity-75 active:bg-secondary active:border-secondary 
+}
+
+.btn-secondary {
+    @apply border-primary border-4 rounded-md my-3 py-2 px-6 text-primary font-bold hover:bg-primary-light active:bg-primary hover:text-white
+}
+
+.titleribbon{
+    @apply before:content-[''] before:flex before:py-2 before:w-16 before:border-primary-light before:border-solid before:border-t-4
+}
+
+.container{
+    @apply m-auto w-[100%] max-w-[1280px] p-6 py-14
+}
+
+.row{
+    @apply md:flex -mx-2
+}
+.col{
+    @apply flex-1 px-2
+}
+
+/*Menu interactivity*/
+input#menu:checked~.menu {
+    right: 0!important;
+}
+input#menu:checked~label#hamburguer {
+    .opacitylines{opacity:0; transition:all 0s}
+    .rotatedlines{
+        span:nth-child(odd) {
+            transform: rotate(45deg);
+            background-color: theme("colors.white");
+        }
+        span:nth-child(even) {
+            transform: rotate(-45deg);
+            background-color: theme("colors.white");
+        }
+    }
+
 }
 
 
+/*Fancybox FIX transition*/ 
+body {
+    transition:none
+}
 
+/*Tinyslider*/
+
+.tns-outer {margin-right:-1.5rem!important}
