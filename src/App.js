@@ -3,13 +3,14 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'tiny-slider/dist/tiny-slider.css';
 
 
-import Router from './services/Router'
-import Header from './components/Header'
+import Router from './services/RouterLayout'
 import Footer from './components/Footer'
 
+/*Services*/
 import FirebaseFetch from './services/FirebaseFetch'
 
-
+/*Components*/
+import CookieToast from './components/CookieToast';
 
 
 function App() {
@@ -19,11 +20,9 @@ function App() {
   return (
     <>
 
-      <Header/>
-      
-      <main>
-        <Router Fancybox={Fancybox}/>
-      </main>
+      <Router Fancybox={Fancybox}/>
+
+      <CookieToast/>
 
       <Footer/>
 

@@ -1,17 +1,13 @@
 
 .button {
     opacity:0.85;
-
-
     width:55px;
     height:55px;
     position:fixed;
     bottom: 2rem;
     right:2rem;
-
     cursor:pointer;
     transition: all 0.3s cubic-bezier(.2,0,0,1)
-
 }
 
 .button:not(.active):hover {
