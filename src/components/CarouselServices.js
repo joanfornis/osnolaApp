@@ -1,6 +1,7 @@
 import React from "react";
 import TinySlider from "tiny-slider-react";
 import CarouselStyle from './Carousel.module.scss'
+import PropertyDetailPage from "../pages/PropertyDetailPage";
 
 
 const settings = {
@@ -63,10 +64,10 @@ function SliderItem() {
     <div>
       <article className={`shadow-lg rounded-md b-4 bg-white overflow-hidden hover:scale-105`}>
         <div className="relative !mt-3 p-6 py-1 cursor-auto text-dark">
-          <img src="/assets/icons/services/assist.svg" alt="" className={`w-[175px] animate-pulse pt-6 pb-10 pr-12 opacity-50`}/>
+          <img src="/assets/icons/services/assist.svg" alt="" className={`w-[150px] animate-pulse pt-4 pb-6 pr-12 opacity-50`}/>
           <h3 className="text-2xl mb-2 text-primary hover:text-secondary">ServiceTitle</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p className="font-josefin text-secondary text-xl py-5">Ver más +</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <a className="block font-josefin text-secondary text-xl py-5">Ver más +</a>
         </div>
       </article>
     </div>

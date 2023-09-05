@@ -30,11 +30,11 @@ input::placeholder, textarea::placeholder {
 
 /*tailwind Mixins*/
 .btn-primary {
-    @apply border-primary font-josefin text-lg text-white border-4 rounded-md my-3 py-2 px-6 font-bold hover:opacity-75 active:bg-secondary active:border-secondary 
+    @apply border-primary font-josefin text-lg text-white border-4 rounded-md my-3 py-2 px-6 font-bold hover:opacity-75 active:bg-secondary active:border-secondary cursor-pointer
 }
 
 .btn-secondary {
-    @apply border-primary border-4 rounded-md my-3 py-2 px-6 text-primary font-bold hover:bg-primary-light active:bg-primary hover:text-white
+    @apply border-primary border-4 rounded-md my-3 py-2 px-6 text-primary font-bold hover:bg-primary-light active:bg-primary hover:text-white cursor-pointer
 }
 
 .titleribbon{

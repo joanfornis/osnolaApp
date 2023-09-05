@@ -13,7 +13,6 @@ export default function PropertyDetailPage({title, closeDetailPageFromChild}) {
 
     const closeDetailPage = () => {
     	closeDetailPageFromChild();
-
   	}
 
 

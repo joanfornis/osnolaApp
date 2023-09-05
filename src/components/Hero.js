@@ -3,7 +3,7 @@
 export default function Hero(params) {
   return (
     <>
-      <div className={`relative bg-dark text-white py-12 relative  ${params.heading ? 'min-h-[600px]' : 'min-h-[400px]'}`}>
+      <div className={`bg-dark text-white py-12 relative  ${params.heading ? 'min-h-[600px]' : 'min-h-[400px]'}`}>
         <figure>
           <img src={params.background} alt="image" className="absolute w-full h-full top-0 left-0 object-cover"/>
         </figure>

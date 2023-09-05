@@ -1,16 +1,18 @@
 import React from 'react';
 import Hero from './../components/Hero'
 import Carousel from './../components/Carousel'
-import CardList from './../components/CardList'
 import FabButton from './../element/FabButton';
 import ContactForm from './../services/ContactForm'
+import { useNavigate } from "react-router-dom";
+import CardList from "./../components/CardList"
 
 export default function Home({Fancybox}) {
 
   const [loading, setLoading] = React.useState(true);
 
+  const navigate = useNavigate()
+
   React.useEffect(() => { 
- 
     setLoading(false, '')
   }, [])
   
@@ -43,7 +45,7 @@ export default function Home({Fancybox}) {
         
           <div className="w-100 max-w-[800px] mt-10 mx-auto pl-2 sm:pl-20">
             <p className="font-josefin text-2xl mb-4">¿Qué ofrecemos?</p>
-            <ul className="flex flex-wrap list-disc text-secondary pl-4 py-2">
+            <ul className="flex text-xl flex-wrap list-disc text-secondary pl-4 py-2 pb-4">
               <li className="w-full sm:w-1/2 font-bold py-1"><span className="text-primary">Asesoramiento inmobiliario</span></li>
               <li className="w-full sm:w-1/2 font-bold py-1"><span className="text-primary">Gestión de Alquileres</span></li>
               <li className="w-full sm:w-1/2 font-bold py-1"><span className="text-primary">Venta de Pisos</span></li>
@@ -53,13 +55,14 @@ export default function Home({Fancybox}) {
               <li className="w-full sm:w-1/2 font-bold py-1"><span className="text-primary">Seguros</span></li>
               <li className="w-full sm:w-1/2 font-bold py-1"><span className="text-primary">Eficiéncia energética</span></li>
             </ul>
+            <a onClick={(e) => navigate('/servicios')} className="btn-secondary inline-block">Ver más +</a>
           </div>
         </div>
         
 
         <Carousel/>
 
-        {/*<CardList/>*/}
+        <CardList/>
 
  
       
