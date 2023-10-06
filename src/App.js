@@ -1,8 +1,7 @@
 import { Fancybox } from '@fancyapps/ui'
+import AOS from 'aos'
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import 'tiny-slider/dist/tiny-slider.css';
-
-
 import Router from './services/RouterLayout'
 import Footer from './components/Footer'
 
@@ -15,14 +14,15 @@ import CookieToast from './components/CookieToast';
 
 function App() {
 
-  console.log(FirebaseFetch('propertiesList'))
+  /*console.log(FirebaseFetch('propertiesList'))*/
+  AOS.init()
 
   return (
     <>
 
       <Router Fancybox={Fancybox}/>
 
-      <CookieToast/>
+      <CookieToast Fancybox={Fancybox}/>
 
       <Footer/>
 

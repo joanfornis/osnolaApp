@@ -25,7 +25,7 @@ export default function ServicesPage({Fancybox}) {
 
       <Hero background='/assets/images/services-background.jpg'>
 
-        <CarouselServices/>
+        {/*<CarouselServices/>*/}
 
       </Hero>
                 

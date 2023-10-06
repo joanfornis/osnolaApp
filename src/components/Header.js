@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="text-primary fixed w-full z-10 px-2 flex items-center justify-between bg-white h-[75px] md:bg-transparent md:absolute shadow-sm md:shadow-none">
+      <header className="text-primary fixed w-full z-20 px-2 flex items-center justify-between bg-white h-[75px] md:bg-transparent md:absolute shadow-sm md:shadow-none">
         <img src="/assets/logos/osnola-logo-primary.svg" alt="logo" className="relative self-start top-0 left-4 w-[120px] h-[120px] p-4 bg-white shadow-lg md:opacity-0"/>
         <div className="w-full text-right md:mr-2">
           <a href="tel:611 509 403" className="bg-slate rounded-full py-[10px] px-5 hover:bg-gray"><img src='/assets/icons/phone-secondary.svg' className="h-[18px] w-[18px] inline md:mr-2"/><span className="font-bold text-dark-light hidden md:inline">611 509 403</span></a>
@@ -30,9 +30,10 @@ export default function Header() {
 
         <nav className={`${HeaderStyle.menu} menu py-20 px-6 bg-dark text-white fixed w-full max-w-[410px] h-full z-10 top-0 -right-[410px] text-2xl`}>
           <ul className="border-y-4 border-primary py-4">
-            <li><Link to="/" name="" className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>Home</Link></li>
-            <li><Link to="/servicios"  className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>Servicios</Link></li>
-            <li><Link to="/contacto"  className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>Contacto</Link></li>
+            <li><a href="#filosophy" name="" className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>Nosotros</a></li>
+            <li><a href="#services"  className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>Servicios</a></li>
+            <li><a href="#properties"  className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>En venta</a></li>
+            <li><a href="#contact"  className="block py-3 px-4 rounded-md hover:bg-dark-light" onClick={uncheckMenu}>Contacto</a></li>
           </ul>
         </nav>
         
